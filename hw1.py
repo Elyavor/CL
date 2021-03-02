@@ -45,10 +45,10 @@ def parser():
             html = get_html(url, params={'page': page})
             #print(html.text)
             reviews.extend(get_content(html.text))
-            with open('reviews1.json', 'w', encoding='utf8') as file:
-                json.dump(reviews, file, indent=2, ensure_ascii=False)
-            print(reviews)
-            time.sleep(181)
+        with open('reviews1.json', 'w', encoding='utf8') as file:
+            json.dump(reviews, file, indent=2, ensure_ascii=False)
+        print(reviews)
+        time.sleep(181)
     else:
         print('error')
 
